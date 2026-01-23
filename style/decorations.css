@@ -1,0 +1,156 @@
+#deco1 {
+    position: absolute;
+    z-index: 1;
+    width: 20vw;
+    top: 900px;
+    left: 0;
+    height: auto;
+}
+
+#deco2 {
+    position: absolute;
+    z-index: 1;
+    max-width: 30%;
+    height: auto;
+    top: 900px;
+    right: 0;
+   
+}
+
+#deco3 {
+    position: absolute;
+    z-index: 1;
+    max-width: 30%;
+    height: auto;
+    right: 0;
+}
+
+
+#deco4 {
+    position: absolute;
+    z-index: 0;
+    width: 5vw;
+    top: 1740px;
+    left: 14vw;
+    height: auto;
+    object-fit: cover;
+
+}
+
+
+#deco5 {
+    position: absolute;
+    z-index: 1;
+    width: 5vw;
+    top: 1740px;
+    right: 16vw;
+    height: auto;
+    object-fit: cover;
+
+}
+
+#g_l_1 {
+    position: absolute;
+    z-index: 0;
+    max-width: 30%;
+    height: auto;
+    top: 2700px;
+    left: 630px;
+    transform: rotate(-5deg);
+   
+}
+
+#g_r_1 {
+    position: absolute;
+    z-index: 0;
+    max-width: 30%;
+    height: auto;
+    
+    top: 2600px;
+    right: 650px;
+
+    transform: rotate(5deg);
+}
+
+/* Pies */
+
+@keyframes test {
+    from {
+        transform: translateY(80%);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+.parallax {
+    animation-name: test;
+    animation-duration: 4s;
+}
+
+#div_pies {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    position: relative;
+    height: 496px;
+    z-index: 0;
+}
+
+
+#pies {
+    width: 945px;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    will-change: transform;
+
+}
+
+
+#g_l_2 {
+    position: absolute;
+    z-index: 0;
+    max-width: 27%;
+    left: 620px;
+    height: auto;
+    transform: rotate(-5deg);
+}
+
+#g_r_2 {
+    position: absolute;
+    z-index: 0;
+    right: 35vw;
+    transform: rotate(5deg);
+    max-width: 27%;
+    height: auto;
+}
+
+
+/*  */
+
+.full_image_punkt {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.full_image_punkt > img:first-child {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 170px;
+    left: 320px;
+    transform: rotate(5deg);
+}
+
+
+.full_image_punkt > img:last-child {
+    position: absolute;
+    width: 100px;
+    top: 70px;
+    right: 320px;
+    transform: rotate(-15deg);
+}

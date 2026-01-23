@@ -1,0 +1,279 @@
+@media (max-width: 768px) {
+    
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+
+    /* header */
+    header > nav {
+        display: none;
+    }
+
+     /* Menu */
+    #select_menu_but {
+        display: block;
+        justify-self: center;
+        align-items: center;
+        margin: 26px 36px 36px auto;
+    }
+
+    .menu {
+        display: block;
+        margin-right: auto;
+        position: fixed; 
+        width: 80%;
+        height: 40%;
+        z-index: 2;
+        top: 122px;
+        left: 10vw;
+        right: 10vw;
+        font-size: 30px;
+    }
+
+
+
+    /* main */
+    h2 {
+        font-weight: normal;
+        font-size: 40px;
+    }
+
+    
+    ol * {
+        font-size: 35px;
+    }
+    
+    ol li {
+        padding-left: 80px;
+    }
+    
+    li::before {
+        width: 60px;
+        height: 60px;
+        font-weight: bold;
+        font-size: 30px;
+        
+    }
+    
+    #punkty p {
+        font-size: 23px;
+    } 
+
+    #punkty h2 {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    #punkty h2::after {
+        padding-top: 70px;
+        width: 45%;
+    }
+
+    #punkty div {
+    height: auto;
+    }       
+
+    #punkty {
+        width: 90%;
+        display: block;
+    }
+    #L1, #L2, #L3 {
+        display: flex;
+        justify-self: center;
+        width: 90%;
+        height: auto;
+    }
+
+    #arthrohard_img {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        width: 80vw;
+        height: auto;
+    }
+
+    #right_arhtrohard {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        margin: 50px 0 0 0;
+    }
+    #right_arhtrohard p:first-child {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #right_arhtrohard p:nth-child(2) {
+        margin-top: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+
+    #arthrohard > div:first-child {
+        display: block;
+    }
+
+    #right_arhtrohard h1 {
+        display: none;
+    }
+
+    #buy_now {
+        display: none;
+    }
+
+    .action_preparat {
+        display: block;
+    }
+
+    #skladniki {
+        display: block;
+    }
+
+    #skladniki > #center_inside {
+        display: none;
+    }
+
+
+    /* Sector image */
+    #div_pies {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-top: 90px;
+    }
+    
+    #deco3 {
+        display: none;
+    }
+
+    #pies {
+        width: 760px;
+        height: auto;
+    }
+    
+    #g_l_2 {
+        top: 140px;
+        left: 130px;
+    }
+
+    #g_r_2 {
+        top: 100px;
+        right: 130px;
+    }
+
+    #bottle {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+
+    #g_l_1 {
+        top: 420px;
+        left: 60px;
+        transform: rotate(-20deg);
+
+    }
+
+    #g_r_1 {
+        top: 370px;
+        right: 90px;
+    }
+
+    #skladniki_img {
+        width: 550px;
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+    /* end */
+
+    .text_center {
+        font-size: 40px;
+    }
+
+    .element * {
+        font-size: 22px;
+    }
+
+    .element > img[src="./image/icons/biotech.svg"] {
+        width: 90px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .element > img {
+        width: 76px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #list_products > div {
+        height: 250px;
+        width: 250px;
+        margin: 20px;
+        flex: 0 0 calc(20% - 20px);
+        flex-direction: column;
+    }
+
+    .product_item > img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* popup */
+    .popup_content {
+        width: 60%;
+    }
+    /*  */
+    #but_ilosc {
+        display: block;
+        height: auto;
+    }
+
+    #but_ilosc label{
+        margin: 20px 0 20px 0;
+        font-size: 23px;
+    }
+
+    #but_ilosc select {
+        width: 350px;
+        font-size: 30px
+    }
+
+    /* decorations */
+
+    .full_image_punkt > img:first-child {
+        /* position: absolute;
+        width: 145px;
+        height: auto;
+        top: 630px;
+         left: 98%; 
+        transform: rotate(5deg);
+        transform: translateX(190%); */
+        display: none;
+    }
+
+
+    .full_image_punkt > img:last-child {
+        position: absolute;
+        width: 145px;
+        top: 630px;
+        right: 95%;
+        transform: rotate(-120deg);
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    #content_js > div:first-child {
+        display: flex;
+    }   
+}
