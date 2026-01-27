@@ -1,5 +1,5 @@
-@media (max-width: 768px) {
-    
+@media (max-width: 767px) {
+
     body {
         margin: 0;
         overflow-x: hidden;
@@ -7,22 +7,22 @@
 
 
     /* header */
-    header > nav {
+    header>nav {
         display: none;
     }
 
-     /* Menu */
+    /* Menu */
     #select_menu_but {
         display: block;
         justify-self: center;
         align-items: center;
-        margin: 26px 36px 36px auto;
+        margin: 26px 3% 36px auto;
     }
 
     .menu {
         display: block;
         margin-right: auto;
-        position: fixed; 
+        position: fixed;
         width: 80%;
         height: 40%;
         z-index: 2;
@@ -40,26 +40,26 @@
         font-size: 40px;
     }
 
-    
+
     ol * {
-        font-size: 35px;
+        font-size: 150%;
     }
-    
+
     ol li {
         padding-left: 80px;
     }
-    
+
     li::before {
         width: 60px;
         height: 60px;
         font-weight: bold;
         font-size: 30px;
-        
+
     }
-    
+
     #punkty p {
         font-size: 23px;
-    } 
+    }
 
     #punkty h2 {
         margin-top: 100px;
@@ -72,14 +72,17 @@
     }
 
     #punkty div {
-    height: auto;
-    }       
+        height: auto;
+    }
 
     #punkty {
         width: 90%;
         display: block;
     }
-    #L1, #L2, #L3 {
+
+    #L1,
+    #L2,
+    #L3 {
         display: flex;
         justify-self: center;
         width: 90%;
@@ -100,6 +103,7 @@
         align-items: center;
         margin: 50px 0 0 0;
     }
+
     #right_arhtrohard p:first-child {
         font-size: 40px;
         text-align: center;
@@ -113,7 +117,7 @@
 
 
 
-    #arthrohard > div:first-child {
+    #arthrohard>div:first-child {
         display: block;
     }
 
@@ -129,11 +133,15 @@
         display: block;
     }
 
+    .action_preparat * {
+        font-size: 120%;
+    }
+
     #skladniki {
         display: block;
     }
 
-    #skladniki > #center_inside {
+    #skladniki>#center_inside {
         display: none;
     }
 
@@ -144,18 +152,29 @@
         position: relative;
         justify-content: center;
         align-items: center;
-        margin-top: 90px;
     }
-    
+
+    #div_pies>img:first-child {
+        position: inherit;
+        top: 20px;
+        right: 80px;
+    }
+
+    #div_pies>img:last-child {
+        position: inherit;
+        top: 20px;
+        left: 80px;
+    }
+
+
     #deco3 {
         display: none;
     }
 
     #pies {
-        width: 760px;
         height: auto;
     }
-    
+
     #g_l_2 {
         top: 140px;
         left: 130px;
@@ -175,46 +194,48 @@
     }
 
     #g_l_1 {
-        top: 420px;
-        left: 60px;
+        top: 250px;
+        left: 40px;
         transform: rotate(-20deg);
 
     }
 
     #g_r_1 {
-        top: 370px;
-        right: 90px;
+        top: 200px;
+        right: 60px;
+        transform: scaleX(-1) rotate(310deg);
     }
 
     #skladniki_img {
-        width: 550px;
+        width: 80%;
         height: auto;
         position: relative;
         z-index: 1;
     }
+
     /* end */
 
     .text_center {
-        font-size: 40px;
+        font-size: 180%;
     }
 
     .element * {
         font-size: 22px;
     }
 
-    .element > img[src="./image/icons/biotech.svg"] {
+    .element>img[src="./image/icons/biotech.svg"] {
         width: 90px;
         height: auto;
         margin-bottom: 20px;
     }
 
-    .element > img {
+    .element>img {
         width: 76px;
         height: auto;
         margin-bottom: 20px;
     }
 
-    #list_products > div {
+    #list_products>div {
         height: 250px;
         width: 250px;
         margin: 20px;
@@ -222,7 +243,7 @@
         flex-direction: column;
     }
 
-    .product_item > img {
+    .product_item>img {
         width: 250px;
         height: 250px;
     }
@@ -231,13 +252,14 @@
     .popup_content {
         width: 60%;
     }
+
     /*  */
     #but_ilosc {
         display: block;
         height: auto;
     }
 
-    #but_ilosc label{
+    #but_ilosc label {
         margin: 20px 0 20px 0;
         font-size: 23px;
     }
@@ -249,19 +271,19 @@
 
     /* decorations */
 
-    .full_image_punkt > img:first-child {
+    .full_image_punkt>img:first-child {
         /* position: absolute;
         width: 145px;
         height: auto;
         top: 630px;
-         left: 98%; 
+        left: 98%; 
         transform: rotate(5deg);
         transform: translateX(190%); */
         display: none;
     }
 
 
-    .full_image_punkt > img:last-child {
+    .full_image_punkt>img:last-child {
         position: absolute;
         width: 145px;
         top: 630px;
@@ -272,8 +294,64 @@
 
 }
 
-@media (min-width: 768px) {
-    #content_js > div:first-child {
+@media (min-width: 767px) {
+    #content_js>div:first-child {
         display: flex;
-    }   
+    }
+
+    #div_pies {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav {
+        margin-right: 50px;
+    }
+
+    #punkty {
+        display: block;
+    }
+
+    .inside {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #pies {
+        width: 100%;
+        margin-bottom: auto;
+    }
+
+    #div_pies>img:first-child {
+        max-width: 20%;
+    }
+
+    #div_pies>img:last-child {
+        max-width: 20%;
+    }
+
+
+
+    .left {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .inside:first-child {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .inside:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inside:last-child {
+        margin-right: auto;
+        margin-left: 20px;
+    }
 }

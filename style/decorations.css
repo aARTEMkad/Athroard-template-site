@@ -9,17 +9,17 @@
 
 #deco2 {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     max-width: 30%;
     height: auto;
     top: 900px;
     right: 0;
-   
+
 }
 
 #deco3 {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     max-width: 30%;
     height: auto;
     right: 0;
@@ -57,7 +57,32 @@
     top: 2700px;
     left: 630px;
     transform: rotate(-5deg);
-   
+
+}
+
+.full_image_inside {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.full_image_inside>img:first-child {
+    position: absolute;
+    left: 330px;
+    top: 300px;
+    width: 180px;
+    height: auto;
+    transform: rotate(2deg);
+}
+
+
+.full_image_inside>img:last-child {
+    position: absolute;
+    right: 330px;
+    top: 380px;
+    width: 180px;
+    height: auto;
 }
 
 #g_r_1 {
@@ -65,7 +90,7 @@
     z-index: 0;
     max-width: 30%;
     height: auto;
-    
+
     top: 2600px;
     right: 650px;
 
@@ -78,6 +103,7 @@
     from {
         transform: translateY(80%);
     }
+
     to {
         transform: translateY(0px);
     }
@@ -92,12 +118,23 @@
 #div_pies {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 200px;
     position: relative;
-    height: 496px;
     z-index: 0;
 }
 
+#div_pies>img:first-child {
+    position: inherit;
+    top: 150px;
+    right: 100px;
+}
+
+#div_pies>img:last-child {
+    position: inherit;
+    top: 50px;
+    left: 140px;
+}
 
 #pies {
     width: 945px;
@@ -106,25 +143,6 @@
     z-index: 1;
     will-change: transform;
 
-}
-
-
-#g_l_2 {
-    position: absolute;
-    z-index: 0;
-    max-width: 27%;
-    left: 620px;
-    height: auto;
-    transform: rotate(-5deg);
-}
-
-#g_r_2 {
-    position: absolute;
-    z-index: 0;
-    right: 35vw;
-    transform: rotate(5deg);
-    max-width: 27%;
-    height: auto;
 }
 
 
@@ -137,7 +155,7 @@
     align-items: center;
 }
 
-.full_image_punkt > img:first-child {
+.full_image_punkt>img:first-child {
     position: absolute;
     width: 100px;
     height: auto;
@@ -147,7 +165,7 @@
 }
 
 
-.full_image_punkt > img:last-child {
+.full_image_punkt>img:last-child {
     position: absolute;
     width: 100px;
     top: 70px;

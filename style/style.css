@@ -31,7 +31,7 @@ header {
 
 
 nav {
-    
+
     justify-self: center;
     align-items: center;
     margin-left: auto;
@@ -62,15 +62,15 @@ h1 {
     height: auto;
 }
 
-#arthrohard > div:first-child {
+#arthrohard>div:first-child {
     display: flex;
     flex-wrap: wrap;
     justify-self: center;
     align-items: center;
 }
+
 #arthrohard_img {
-    /* aspect-ratio: 0.787; */
-    width: 31vw;
+    width: 600px;
     height: auto;
 }
 
@@ -90,8 +90,12 @@ h1 {
     margin-left: 150px;
 }
 
-#text > p {
-    margin: 0;;
+#text {
+    z-index: 2;
+}
+
+#text>p {
+    margin: 0;
 }
 
 #text p:first-child {
@@ -120,7 +124,7 @@ h1 {
     display: flex;
     content: "";
     width: 200px;
-     border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 /*  */
@@ -133,7 +137,7 @@ h1 {
     gap: 100px;
 }
 
-#punkty > div {
+#punkty>div {
     height: 650px;
 }
 
@@ -143,13 +147,14 @@ h1 {
     align-items: center;
     text-align: center;
 }
+
 #punkty h2::after {
     position: absolute;
     margin-top: 85px;
     display: flex;
     content: "";
     width: 90px;
-     border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 #punkty p {
@@ -198,7 +203,9 @@ li::before {
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-#L1, #L2, #L3 {
+#L1,
+#L2,
+#L3 {
     width: 360px;
     height: auto;
     aspect-ratio: 360 / 295;
@@ -233,18 +240,16 @@ li::before {
 #skladniki {
     display: grid;
     justify-content: center;
-    grid-template-columns: 450px 450px 450px;
-    /* grid-template-columns: repeat(3, minmax(450px, 1fr)) */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr))
 }
 
-#skladniki > div {
+#skladniki>div {
     display: block;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     justify-content: center;
     align-items: center;
 }
+
 
 #center_inside {
     display: grid;
@@ -267,7 +272,7 @@ li::before {
     align-items: center;
     content: "";
     width: 90px;
-     border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .ilosc {
@@ -298,6 +303,7 @@ li::before {
 #bottle {
     display: none;
 }
+
 /*  */
 
 #content_js {
@@ -315,7 +321,7 @@ li::before {
 #but_ilosc {
     margin-top: 20px;
     margin-bottom: 30px;
-    justify-self: center; 
+    justify-self: center;
     width: 350px;
     height: 50px;
     border: 3px solid #AD4844;
@@ -352,7 +358,7 @@ li::before {
     justify-content: center;
 }
 
-#list_products > div {
+#list_products>div {
     height: 350px;
     width: 350px;
     margin: 20px;
@@ -360,17 +366,19 @@ li::before {
     flex-direction: column;
 }
 
-.product_item > img {
+.product_item>img {
     width: 350px;
     height: 350px;
+    background-color: #BEBEBE;
 }
 
 .action_preparat {
-        display: none;
+    display: none;
 }
 
-a:active, a:link, a:visited {
+a:active,
+a:link,
+a:visited {
     color: inherit;
     text-decoration: none;
 }
-
