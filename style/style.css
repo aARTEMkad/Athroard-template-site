@@ -94,7 +94,7 @@ body {
 
 .product-intro__button {
     width: 170px;
-    height: 35px;
+    height: 45px;
     margin: 0;
     padding: 0;
     font-size: 1.5rem;
@@ -119,6 +119,9 @@ body {
 
 .product-intro__text p:first-child {
     font-size: 4.8rem;
+    background: linear-gradient(90deg, #000000, #666666, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .product-intro__text p:nth-child(2) {
@@ -131,6 +134,9 @@ body {
 .section-title {
     position: sticky;
     z-index: 1;
+    background: linear-gradient(91deg, #000000, #b7b7b7, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*  */
@@ -234,7 +240,7 @@ body {
 .u-list-ol li {
     counter-increment: item;
     position: relative;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     margin-bottom: 40px;
 }
 
@@ -276,6 +282,9 @@ body {
     align-items: center;
     margin-top: 80px;
     font-size: 5rem;
+    background: linear-gradient(90deg, #1a1a1a 0%,#4a4a4a 40%, #8a8a8a 70%,#b8b8b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .composition__subtitle {

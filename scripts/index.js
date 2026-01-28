@@ -3,8 +3,6 @@ let pageNumber_ = 1;
 const select_ = document.getElementById('ilosc');
 
 select_.addEventListener('change', function () {
-    const count = this.value;
-
     if (document.querySelectorAll('.product_item')) {
         document.querySelectorAll('.product_item').forEach(item => {
             item.remove();
@@ -20,6 +18,59 @@ document.addEventListener('DOMContentLoaded', () => {
             createProduct(data, select_.value)
         });
 })
+
+// For mobile menu
+const menu_button = document.getElementById('header__menu-button-action');
+menu_button.addEventListener('click', () => {
+    try {
+        const exit = document.querySelector('.background_menu')
+
+        if(exit) {
+            exit.remove();
+            return;
+        }
+        const menu_list = document.createElement('div')
+            menu_list.className = "background_menu"
+            menu_list.id = 'background_menu'
+            menu_list.innerHTML = `
+                <div class="menu">
+                    <a href="#dzialanie">DZIAŁANIE PREPARATU</a>
+                    <a href="#zalecenia">ZALECENIA</a>
+                    <a href="#sklad">SKŁAD</a>
+                    <a href="#dawkowanie">DAWKOWANIE</a>
+                    <a href="#opinie">OPINIE</a>
+                </div>
+            `;
+            document.body.appendChild(menu_list);
+        
+    } catch (e) {
+        console.log(e);
+    }
+})
+
+
+
+
+
+
+const loader = document.getElementById('end');
+
+const observer = new IntersectionObserver(entiries => {
+    if (entiries[0].isIntersecting) {
+        fetch(`https://brandstestowy.smallhost.pl/api/random?pageNumber=${pageNumber_}&pageSize=${select_.value}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(`Load ${select_.value} with page ${pageNumber_}`);
+                createProduct(data, select_.value)
+                ++pageNumber_;
+            });
+    }
+}, { rootMargin: '100px' })
+
+observer.observe(loader);
+
+
+
 
 
 function createProduct(data, numb) {
@@ -67,50 +118,3 @@ function showDetails(data) {
         console.log(e);
     }
 }
-
-
-// For mobile menu
-const menu_button = document.getElementById('header__menu-button-action');
-menu_button.addEventListener('click', () => {
-    try {
-        if (document.getElementById('menu')) {
-            document.body.removeChild(document.getElementsByClassName('background_menu')[0]);
-        } else {
-            const menu_list = document.createElement('div')
-            menu_list.className = "background_menu"
-            menu_list.innerHTML = `
-                <div class="menu">
-                    <a href="#dzialanie">DZIAŁANIE PREPARATU</a>
-                    <a href="#zalecenia">ZALECENIA</a>
-                    <a href="#sklad">SKŁAD</a>
-                    <a href="#dawkowanie">DAWKOWANIE</a>
-                    <a href="#opinie">OPINIE</a>
-                </div>
-            `;
-            document.body.appendChild(menu_list);
-        }
-    } catch (e) {
-        console.log(e);
-    }
-})
-
-
-
-
-
-
-const loader = document.getElementById('end');
-
-const observer = new IntersectionObserver(entiries => {
-    if (entiries[0].isIntersecting) {
-        fetch(`https://brandstestowy.smallhost.pl/api/random?pageNumber=${pageNumber_}&pageSize=${select_.value}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(`Load ${select_.value} with page ${pageNumber_}`);
-                createProduct(data, select_.value)
-                ++pageNumber_;
-            });
-    }
-}, { rootMargin: '100px' })
-
-observer.observe(loader);
