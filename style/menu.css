@@ -1,26 +1,31 @@
 /* for mobile */
-#select_menu_but {
+.header__menu-button {
     display: none;
     z-index: 2;
     width: 75px;
     height: 75px;
 }
 
-#select_menu_but:hover {
+.header__menu-button:hover {
     border-radius: 50%;
     box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.2);
 }
 
-.line_hor {
+.header__menu-line {
+    display: block;
     width: 50px;
     height: 6px;
     background-color: #AD4844;
     margin: 9px 0 0 12px;
 }
 
-.line_hor:first-child {
+.header__menu-line:first-child {
     margin: 15px 0 0 12px;
 }
+
+
+
+
 
 .menu * {
     color: white

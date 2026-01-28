@@ -7,12 +7,12 @@
 
 
     /* header */
-    header>nav {
+    .header__nav {
         display: none;
     }
 
     /* Menu */
-    #select_menu_but {
+    .header__menu-button {
         display: block;
         justify-self: center;
         align-items: center;
@@ -45,9 +45,16 @@
         font-size: 150%;
     }
 
-    ol li {
-        padding-left: 80px;
+    .action-preparat__item {
+        padding: 20px 0px 20px 85px;
+
     }
+
+    .action-preparat {
+        display: block;
+        font-size: 2.3rem;
+    }
+
 
     li::before {
         width: 60px;
@@ -57,27 +64,30 @@
 
     }
 
-    #punkty p {
+    .advantages__text {
         font-size: 23px;
     }
 
-    #punkty h2 {
+    .advantages__title {
         margin-top: 100px;
         margin-bottom: 100px;
     }
 
-    #punkty h2::after {
+    .advantages__title::after {
+        margin-top: 40px;
         padding-top: 70px;
         width: 45%;
     }
 
-    #punkty div {
+    .advantages__item>div {
         height: auto;
     }
 
-    #punkty {
-        width: 90%;
+
+
+    .advantages {
         display: block;
+        margin-top: 10px;
     }
 
     #L1,
@@ -89,7 +99,7 @@
         height: auto;
     }
 
-    #arthrohard_img {
+    .product-intro__image>img {
         display: flex;
         justify-self: center;
         align-items: center;
@@ -97,73 +107,58 @@
         height: auto;
     }
 
-    #right_arhtrohard {
+    .product-intro__content {
         display: flex;
         justify-self: center;
         align-items: center;
         margin: 50px 0 0 0;
     }
 
-    #right_arhtrohard p:first-child {
-        font-size: 40px;
+    .product-intro__content p:first-child {
+        font-size: 4rem;
+        padding: 0px 25px 0px 25px;
         text-align: center;
     }
 
-    #right_arhtrohard p:nth-child(2) {
-        margin-top: 70px;
-        font-size: 20px;
+    .product-intro__content p:nth-child(2) {
+        font-size: 2rem;
         text-align: center;
+        padding: 0px 25px 0px 25px;
     }
 
 
 
-    #arthrohard>div:first-child {
+    .product-intro {
         display: block;
     }
 
-    #right_arhtrohard h1 {
+    .product-intro__content h1 {
         display: none;
     }
 
-    #buy_now {
+    .product-intro__button {
         display: none;
-    }
-
-    .action_preparat {
-        display: block;
-    }
-
-    .action_preparat * {
-        font-size: 120%;
     }
 
     #skladniki {
         display: block;
     }
 
-    #skladniki>#center_inside {
+    .composition__group--center {
         display: none;
     }
 
 
     /* Sector image */
-    #div_pies {
+    .dog {
         display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
     }
 
-    #div_pies>img:first-child {
-        position: inherit;
-        top: 20px;
-        right: 80px;
-    }
-
-    #div_pies>img:last-child {
-        position: inherit;
-        top: 20px;
-        left: 80px;
+    .dog__image {
+        width: 100%;
     }
 
 
@@ -185,12 +180,19 @@
         right: 130px;
     }
 
-    #bottle {
+    .bottle {
         display: flex;
-        position: relative;
         justify-content: center;
         align-items: center;
         margin-top: 200px;
+    }
+
+
+    .bottle__image {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
     }
 
     #g_l_1 {
@@ -202,22 +204,11 @@
 
     #g_r_1 {
         top: 200px;
-        right: 60px;
-        transform: scaleX(-1) rotate(310deg);
-    }
-
-    #skladniki_img {
-        width: 80%;
-        height: auto;
-        position: relative;
-        z-index: 1;
+        right: 75px;
+        transform: scaleX(-1) rotate(330deg);
     }
 
     /* end */
-
-    .text_center {
-        font-size: 180%;
-    }
 
     .element * {
         font-size: 22px;
@@ -235,17 +226,24 @@
         margin-bottom: 20px;
     }
 
+    #list_products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
     #list_products>div {
-        height: 250px;
-        width: 250px;
+        height: 220px;
+        width: 220px;
         margin: 20px;
         flex: 0 0 calc(20% - 20px);
         flex-direction: column;
     }
 
     .product_item>img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
 
     /* popup */
@@ -254,24 +252,24 @@
     }
 
     /*  */
-    #but_ilosc {
+    .products__controls {
         display: block;
         height: auto;
     }
 
-    #but_ilosc label {
+    .products__label-text {
         margin: 20px 0 20px 0;
         font-size: 23px;
     }
 
-    #but_ilosc select {
+    .products__select {
         width: 350px;
         font-size: 30px
     }
 
     /* decorations */
 
-    .full_image_punkt>img:first-child {
+    .advantages__image>img:first-child {
         /* position: absolute;
         width: 145px;
         height: auto;
@@ -283,7 +281,7 @@
     }
 
 
-    .full_image_punkt>img:last-child {
+    .advantages__image>img:last-child {
         position: absolute;
         width: 145px;
         top: 630px;
@@ -291,25 +289,33 @@
         transform: rotate(-120deg);
     }
 
+    #deco1 {
+        top: 1150px;
+    }
 
+    #deco2 {
+        top: 1200px;
+    }
+
+
+    .u-text-center {
+        font-weight: normal;
+        font-size: 3.4rem;
+    }
 }
 
 @media (min-width: 767px) {
-    #content_js>div:first-child {
+    .products__controls {
         display: flex;
-    }
-
-    #div_pies {
-        max-width: 90%;
     }
 }
 
-@media (max-width: 1200px) {
-    nav {
+@media (max-width: 1400px) {
+    .header__nav {
         margin-right: 50px;
     }
 
-    #punkty {
+    .advantages {
         display: block;
     }
 
@@ -323,35 +329,8 @@
         margin-bottom: auto;
     }
 
-    #div_pies>img:first-child {
-        max-width: 20%;
-    }
-
-    #div_pies>img:last-child {
-        max-width: 20%;
-    }
-
-
-
-    .left {
+    .product-intro__image {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media (min-width: 1200px) {
-    .inside:first-child {
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .inside:nth-child(2) {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .inside:last-child {
-        margin-right: auto;
-        margin-left: 20px;
     }
 }

@@ -9,94 +9,102 @@
     <link rel="stylesheet" href="./style/popup.css">
     <link rel="stylesheet" href="./style/decorations.css">
     <link rel="stylesheet" href="./style/adaptive.css">
+    <script defer src="./scripts/index.js"></script>
     <title>Arthrohard</title>
 
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <p><span style="color: #111111;">ARTHRO</span><span style="color: #AD4844;">HARD</span></p>
+    <header class="header">
+        <div class="header__logo">
+            <p><span class="header__logo--dark">ARTHRO</span><span class="header__logo--accent">HARD</span></p>
         </div>
-        <nav>
-            <a href="#co_wyroznia">CO NAS WYRÓŻNIA</a>
-            <a href="#sklad">SKŁAD</a>
-            <a href="#produkty"><b>PRODUKTY</b></a>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+            <a class="header__link" href="#co_wyroznia">CO NAS WYRÓŻNIA</a>
+            <a class="header__link" href="#sklad">SKŁAD</a>
+            <a class="header__link" href="#produkty">PRODUKTY</a>
         </nav>
 
         <!-- For mobile -->
-        <div id="select_menu_but">
-            <span class="line_hor"></span>
-            <span class="line_hor"></span>
-            <span class="line_hor"></span>
+        <div class="header__menu-button" id="header__menu-button-action">
+            <span class="header__menu-line"></span>
+            <span class="header__menu-line"></span>
+            <span class="header__menu-line"></span>
         </div>
-        <!-- End -->
     </header>
 
     <main>
-        <div id="arthrohard">
-            <div>
-                <div class='left'>
+        <div class="page-section">
+
+            <!-- 1 -->
+            <div class="product-intro">
+                <div class="product-intro__image">
                     <img id="arthrohard_img" src="./image/A2.png" loading="lazy" alt="Product Image" />
                 </div>
-                <div id='right_arhtrohard' class='right'>
-                    <h1><span style="color: #111111;">ARTHRO</span><span style="color: #AD4844;">HARD</span></h1>
-                    <div id='text'>
+                <div class='product-intro__content'>
+                    <h1 class="product-intro__title">
+                        <span class="header__logo--dark">ARTHRO</span><span class="header__logo--accent">HARD</span>
+                    </h1>
+                    <div class="product-intro__text">
                         <p>Lab-V Arthrohard Preparat <br>na wsparcie stawów dla psa i kota</p>
                         <p>Arthrohard to dobrze przyswajalny suplement diety w formie syropu,<br>
                             stworzony z myślą o zdrowiu stawów Twojego psa lub kota.</p>
                     </div>
-                    <button id='buy_now'>Kup teraz</button>
+                    <button class="product-intro__button">Kup teraz</button>
                 </div>
             </div>
 
-            <section id="co_wyroznia" class="text_center">Co wyróżnia nasz preparat</section>
+            <!-- 2 -->
+            <section id="co_wyroznia" class="section-title u-text-center">Co wyróżnia nasz preparat</section>
 
-            <div id="punkty">
-                <div>
-                    <h2>Innowacyjny dodatek - <br>Czarciego Pazura</h2>
-
-                    <p>
+            <!-- 3 -->
+            <div class="advantages">
+                <div class="advantages__item">
+                    <h2 class="advantages__title">Innowacyjny dodatek - <br>Czarciego Pazura</h2>
+                    <p class="advantages__text">
                         Zapewnia dodatkowe wsparcie w zwalczaniu<br> stanów bólowych i zapalnych. Skoncentrowane<br>
                         składniki aktywne, opracowane we współpracy<br>
                         z lekarzami weterynarii, przynoszą szybkie<br>
                         i zauważalne efekty, szczególnie korzystne dla<br> zwierząt z poważnymi problemami stawowymi.
                     </p>
-                    <div class="full_image_punkt">
+                    <div class="advantages__image">
                         <img loading="lazy" src="./image/vectors/gray_left_image.svg" alt="left_svg">
                         <img loading="lazy" id="L1" src="./image/L1.png" alt="kwiaty">
                         <img loading="lazy" src="./image/vectors/gray_right_image.svg" alt="right_svg">
                     </div>
                 </div>
-                <div>
-                    <h2>Wygoda - <br>dwa sposoby podawania</h2>
-                    <ol>
-                        <li>Bezpośrednio do pyszczka</li>
-                        <li>Zmieszany z karmą</li>
+                <div class="advantages__item">
+                    <h2 class="advantages__title">Wygoda - <br>dwa sposoby podawania</h2>
+                    <ol class="advantages__ol u-list-ol">
+                        <li class="advantages__ol-item">Bezpośrednio do pyszczka</li>
+                        <li class="advantages__ol-item">Zmieszany z karmą</li>
                     </ol>
-                    <div class="full_image_punkt">
+                    <div class="advantages__image">
                         <img loading="lazy" src="./image/vectors/gray_left_image.svg" alt="left_svg">
                         <img loading="lazy" id="L2" src="./image/L2.png" alt="piesy">
                         <img loading="lazy" src="./image/vectors/gray_right_image.svg" alt="right_svg">
                     </div>
                 </div>
-                <div>
-                    <h2>Skuteczność -<br>skoncentrowana dawka</h2>
-                    <p id="jedno">
+                <div class="advantages__item">
+                    <h2 class="advantages__title">Skuteczność -<br>skoncentrowana dawka</h2>
+                    <p class="advantages__text u-text-bold">
                         Tylko jedna porcja dziennie.<br>
                         To nie tylko wygoda, ale również gwarancja,<br>
                         że Twoje zwierzę otrzymuje wszystko, czego <br>
-                        potrzebuje, aby cieszyć się zdrowiem i aktywnością <br>
-                        na długo. Skorzystaj z zalet Arthrohard i zobacz<br>
+                        potrzebuje, aby cieszyć się zdrowiem i aktywnością
+                        na długo. Skorzystaj z zalet Arthrohard i zobacz
                         różnicę w komforcie życia swojego zwierzęcia.
                     </p>
-                    <div class="full_image_punkt">
+                    <div class="advantages__image">
                         <img loading="lazy" src="./image/vectors/gray_left_image.svg" alt="left_svg">
                         <img loading="lazy" id="L3" src="./image/L3.png" alt="cos">
                         <img loading="lazy" src="./image/vectors/gray_right_image.svg" alt="right_svg">
                     </div>
                 </div>
             </div>
+
             <img loading="lazy" id="deco1" src="./image/vectors/gray_1.svg" alt="deco1">
             <img loading="lazy" id="deco3" src="./image/vectors/gray_3.svg" alt="deco3">
             <img loading="lazy" id="deco2" src="./image/vectors/gray_2.svg" alt="deco2">
@@ -104,55 +112,59 @@
 
 
         <!-- Only mobile -->
-        <div class="action_preparat">
-            <section id="dzialanie" class="text_center">Działanie prepartatu</section>
-            <ol>
-                <li>Wsparcie rozwoju chrąstki stawowej</li>
-                <li>Działanie chondroprotekcyjne</li>
-                <li>Zmniejszenie stanu zapalnego i bólu</li>
-                <li>Wszmocnienie statów</li>
-                <li>Ochrona przed mikrourazami</li>
-                <li>Regeneracja po urazach i zabiegach ortopedycznych</li>
-                <li>Poprawa jakości życia</li>
+        <div class="action-preparat">
+            <section class="action-preparat__text u-text-center ">
+                <h2>Działanie prepartatu</h2>
+            </section>
+            <ol class="action-preparat__ol u-list-ol">
+                <li class="action-preparat__item">Wsparcie rozwoju chrąstki stawowej</li>
+                <li class="action-preparat__item">Działanie chondroprotekcyjne</li>
+                <li class="action-preparat__item">Zmniejszenie stanu zapalnego i bólu</li>
+                <li class="action-preparat__item">Wszmocnienie statów</li>
+                <li class="action-preparat__item">Ochrona przed mikrourazami</li>
+                <li class="action-preparat__item">Regeneracja po urazach i zabiegach ortopedycznych</li>
+                <li class="action-preparat__item">Poprawa jakości życia</li>
             </ol>
         </div>
-        <!-- end -->
 
+        <div id="composition">
+            <section id="sklad" class="composition__text u-text-center">
+                <h2>Skład w 5 ml</h2>
+            </section>
 
-        <div id="sklad">
-            <section id="sklad" class="text_center">Skład w 5 ml</section>
+            <p class="composition__subtitle u-text-center">Co dają poszczególne składniki:</p>
 
-            <p class="skladniki_srodek">Co dają poszczególne składniki:</p>
-
-            <div id="skladniki">
-                <div class="inside">
-                    <div class="element">
+            <div id="composition_list" class="composition__list">
+                <!-- Left group -->
+                <div class="composition__group composition__group--left">
+                    <div class="composition__item">
                         <img src="./image/icons/biotech.svg" alt="biotech">
-                        <h3 class="naglowki_3">Siarczan glukozaminy</h3>
-                        <p class="ilosc">650 mg</p>
-                        <p class="skladniki_opis">Glukozamina jest naturalnym składnikiem chrząstki.<br>
-                            Dodatek glukozaminy przyczynia się do zwiększenia<br> produkcji glikozaminoglikanów (m.in.
+                        <h3 class="composition__item-title">Siarczan glukozaminy</h3>
+                        <p>650 mg</p>
+                        <p>Glukozamina jest naturalnym składnikiem chrząstki.<br>
+                            Dodatek glukozaminy przyczynia się do zwiększenia<br> produkcji glikozaminoglikanów
+                            (m.in.
                             siarczanu <br>keratanu, heparanu, kwasu hialuronowego), które <br>pomagają w odbudowie
                             chrząstki, co jest<br>
                             szczególnie korzystne dla zwierząt ze zmianami<br> zwyrodnieniowymi stawów.
                         </p>
                     </div>
-                    <div class="element">
+                    <div class="composition__item">
                         <img src="./image/icons/biotech.svg" alt="biotech">
-                        <h3 class="naglowki_3">Siarczan chondroityny</h3>
-                        <p class="ilosc">300 mg</p>
-                        <p class="skladniki_opis">Chondroityna, podobnie jak glukozamina, jest<br>
+                        <h3 class="composition__item-title">Siarczan chondroityny</h3>
+                        <p>300 mg</p>
+                        <p>Chondroityna, podobnie jak glukozamina, jest<br>
                             składnikiem chrząstki. Chondroityna pomaga<br>
                             zwalczać enzymy, które niszczą chrząstkę, a także <br>
                             pomaga chrząstce zatrzymać wodę, co jest ważne <br>
                             dla jej sprężystości i absorpcji wstrząsów.
                         </p>
                     </div>
-                    <div class="element">
+                    <div class="composition__item">
                         <img src="./image/icons/colb.svg" alt="colb">
-                        <h3 class="naglowki_3">Kwas hialuronowy</h3>
-                        <p class="ilosc">50 mg</p>
-                        <p class="skladniki_opis">Kwas hialuronowy jest kluczowym składnikiem płynu <br>
+                        <h3 class="composition__item-title">Kwas hialuronowy</h3>
+                        <p>50 mg</p>
+                        <p>Kwas hialuronowy jest kluczowym składnikiem płynu <br>
                             stawowego, który działa jak smar i amortyzator dla <br>
                             stawów. Suplementacja kwasem hialuronowym może <br>
                             pomóc w utrzymaniu prawidłowej objętości<br>
@@ -160,31 +172,38 @@
                         </p>
                     </div>
                 </div>
-                <div id="center_inside" class="inside">
+
+                <!-- Center group -->
+                <div class="composition__group composition__group--center">
                     <div class="full_image_inside">
                         <img loading="lazy" src="./image/vectors/green_1_l.svg" alt="G1_bottle">
                         <img loading="lazy" id="skladniki_img" src="./image/center.png" alt="skladniki">
                         <img loading="lazy" src="./image/vectors/green_1_r.svg" alt="G2_bottle">
+                        <!-- <img>
+                        <img loading="lazy" id="skladniki_img" src="./image/test/Group 16.png">
+                        <img> -->
                     </div>
 
-                    <button id="buy_now_2">Kup teraz</button>
+                    <button class="composition__button-buy">Kup teraz</button>
                 </div>
-                <div class="inside">
-                    <div class="element">
+
+                <!-- Right group -->
+                <div class="composition__group composition__group--rigth">
+                    <div class="composition__item">
                         <img src="./image/icons/grass.svg" alt="grass">
-                        <h3 class="naglowki_3">Czarci pazur</h3>
-                        <p class="ilosc">250 mg</p>
-                        <p class="skladniki_opis">Czarci pazur jest rośliną, która ma właściwości <br>
+                        <h3 class="composition__item-title">Czarci pazur</h3>
+                        <p>250 mg</p>
+                        <p>Czarci pazur jest rośliną, która ma właściwości <br>
                             przeciwzapalne i przeciwbólowe. Może to pomóc <br>
                             zwierzętom, które doświadczają bólu i stanu <br>
                             zapalnego związanego z problemami ze stawami.
                         </p>
                     </div>
-                    <div class="element">
+                    <div class="composition__item">
                         <img src="./image/icons/C_plus_plus.svg" alt="c++">
-                        <h3 class="naglowki_3">Witamina C</h3>
-                        <p class="ilosc">50 mg</p>
-                        <p class="skladniki_opis">Witamina C jest potężnym przeciwutleniaczem,<br>
+                        <h3 class="composition__item-title">Witamina C</h3>
+                        <p>50 mg</p>
+                        <p>Witamina C jest potężnym przeciwutleniaczem,<br>
                             który może pomóc w ochronie stawów poprzez <br>
                             neutralizację wolnych rodników, które mogą <br>
                             uszkadzać chrząstkę. Ponadto, witamina C odgrywa <br>
@@ -192,11 +211,11 @@
                             kluczowego składnika chrząstki.
                         </p>
                     </div>
-                    <div class="element">
+                    <div class="composition__item">
                         <img src="./image/icons/device_hub.svg" alt="device-hub">
-                        <h3 class="naglowki_3">MSM</h3>
-                        <p class="ilosc">250 mg</p>
-                        <p class="skladniki_opis">Metylosulfonylometan, czyli MSM, to naturalny <br>
+                        <h3 class="composition__item-title">MSM</h3>
+                        <p>250 mg</p>
+                        <p>Metylosulfonylometan, czyli MSM, to naturalny <br>
                             związek siarki, który pomaga w utrzymaniu <br>
                             zdrowych stawów poprzez zmniejszenie stanu <br>
                             zapalnego i bólu. MSM może również pomagać <br>
@@ -207,27 +226,27 @@
 
                 </div>
             </div>
+
+
+
             <!-- Only mobile -->
-            <div id="bottle">
-                <img loading="lazy" id="g_l_1" src="./image/vectors/green_1_l.svg" alt="G1_bottle">
-                <img loading="lazy" id="skladniki_img" src="./image/center.png" alt="skladniki">
-                <img loading="lazy" id="g_r_1" src="./image/vectors/green_1_r.svg" alt="G2_bottle">
+            <div class="bottle">
+                <img loading="lazy" class="bottle__image" src="./image/test/Group 16__.png">
             </div>
             <!-- end -->
-            <div id="div_pies" class="parallax" data-reveal-fx-delay="100">
-                <img loading="lazy" src="./image/vectors/green_2_l.svg" alt="G3_bottle">
-                <img loading="lazy" id="pies" src="./image/pies.png" alt="pies">
-                <img loading="lazy" src="./image/vectors/green_2_r.svg" alt="G4_bottle">
+            <div class="dog dog--parallax">
+                <img alt="pies" loading="lazy" class="dog__image" src="./image/test/Group 17.png">
             </div>
         </div>
-
+    </main>
+    <footer>
         <!-- API -->
-        <div id="content_js">
-            <div id="but_ilosc">
-                <label for="ilosc">
+        <div id="content_js" class="products">
+            <div class="products__controls">
+                <label for="ilosc" class="products__label-text">
                     <section id="produkty">liczba produktów na stronie</section>
                 </label>
-                <select name="ilosc" id="ilosc" onchange="changeNumberOfProducts(this)">
+                <select class="products__select" name="ilosc" id="ilosc">
                     <option value="4" selected>4</option>
                     <option value="8">8</option>
                     <option value="16">16</option>
@@ -235,12 +254,10 @@
                     <option value="50">50</option>
                 </select>
             </div>
-            <div id="list_products">
-
-            </div>
+            <div id="list_products"></div>
         </div>
-        <script src="./scripts/index.js"></script>
-    </main>
+        <div id="end"></div>
+    </footer>
 </body>
 
 </html>
