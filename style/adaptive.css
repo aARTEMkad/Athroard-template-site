@@ -14,7 +14,6 @@
         overflow-x: hidden;
     }
 
-
     /* header */
     .header__nav {
         display: none;
@@ -29,9 +28,9 @@
     .menu {
         display: block;
         margin-right: auto;
-        position: fixed;
+        position: sticky;
         width: 80%;
-        height: 40%;
+        height: 45%;
         z-index: 2;
         top: 122px;
         left: 10vw;
@@ -274,7 +273,7 @@
     }
 
     /* popup */
-    .popup_content {
+    .popup__content {
         width: 60%;
     }
 

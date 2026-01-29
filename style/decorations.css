@@ -96,22 +96,9 @@
 
 /* Pies */
 
-@keyframes anim {
-    from {
-        transform: translateY(80%);
-    }
-
-    to {
-        transform: translateY(0px);
-    }
-}
-
-
 .dog--parallax {
-    /* animation-name: anim;
-    animation-duration: 4s; */
     transform: translateY(100%);
-    transition: transform 0.5s linear;
+    transition: transform 0.2s linear;
 }
 
 .dog {

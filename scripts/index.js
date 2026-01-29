@@ -95,25 +95,38 @@ function showDetails(data) {
         if (document.getElementById('close_button')) {
             document.body.removeChild(document.getElementsByClassName('popup')[0]);
         } else {
-            const popup = document.createElement('div');
-            popup.className = 'popup';
-            popup.innerHTML = `
+            const x = `
                 <div class="popup">
-                    <div class="popup_content">
+                    <div class="popup__content">
                         <div id="two_ele">
                             <p><strong>ID:</strong> ${data.id}</p>
-                            <div id="close_button">&times;</div>
+                            <button class="popup__button-exit" id="close_button">&times;</button>
                         </div>
-                        <p><strong>Nazwa:</strong> ${data.text}</p>
-                        <p><strong>Wartosc:</strong> ${data.id}</p>
+                        <div>
+                            <p><strong>Nazwa:</strong> ${data.text}</p>
+                            <p><strong>Wartosc:</strong> ${data.id}</p>
+                        </div>
                     </div>
                 </div>
             `;
 
-            document.body.appendChild(popup);
+            document.body.insertAdjacentHTML("beforeend", x)
+
+
+            const popup = document.querySelector(".popup");
+            if(popup) {
+                popup.addEventListener('click', () => {
+                    popup.remove();
+                })
+
+                popup.querySelector('.popup__content').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                })
+            }
+
             const button = document.getElementById('close_button')
             button.addEventListener('click', function () {
-                document.body.removeChild(popup);
+                document.querySelector(".popup")?.remove();
             });
         }
     } catch (e) {
