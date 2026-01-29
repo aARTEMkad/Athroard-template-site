@@ -41,17 +41,19 @@ menu_button.addEventListener('click', () => {
                     <a href="#opinie">OPINIE</a>
                 </div>
             `;
-            document.body.appendChild(menu_list);
-        
+        document.body.appendChild(menu_list);
+        menu_list.addEventListener('click', () => {
+            menu_list.remove();
+        })
+
+        menu_list.querySelector('.menu').addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
+
     } catch (e) {
         console.log(e);
     }
 })
-
-
-
-
-
 
 const loader = document.getElementById('end');
 
@@ -61,7 +63,7 @@ const observer = new IntersectionObserver(entiries => {
             .then(response => response.json())
             .then(data => {
                 console.log(`Load ${select_.value} with page ${pageNumber_}`);
-                createProduct(data, select_.value)
+                createProduct(data)
                 ++pageNumber_;
             });
     }
@@ -73,8 +75,8 @@ observer.observe(loader);
 
 
 
-function createProduct(data, numb) {
-    for (let i = 0; i < numb; i++) {
+function createProduct(data) {
+    for (let i = 0; i < data.data.length; i++) {
         const div = document.createElement('div');
         div.className = 'product_item';
         div.innerHTML = `

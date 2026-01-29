@@ -9,19 +9,30 @@ html {
 }
 
 body {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
 
 .header {
-    position: sticky;
-    z-index: 2;
     display: flex;
     height: 122px;
     width: auto;
+}
+/* .header::after {
+    height: 1px;
+    width: auto;
     box-shadow: 0px 9px 17px -13px rgb(0, 0, 0);
-    z-index: 2;
+} */
+
+.header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;  /* тільки знизу */
+    height: 122px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* сама тінь */
+    pointer-events: none; /* дуже важливо */
 }
 
 .header__logo p {
@@ -87,8 +98,6 @@ body {
     justify-self: center;
     align-items: center;
     gap: 40px;
-    position: sticky;
-    z-index: 1;
 }
 
 
@@ -166,7 +175,7 @@ body {
     justify-self: center;
     margin-top: 160px;
     padding-bottom: 50px;
-    gap: 85px;
+    gap: 125px;
     font-size: 4.5rem;
 }
 
@@ -210,7 +219,9 @@ body {
     margin-top: 40px;
 }
 
-
+.advantages__ol-item {
+    padding-left: 60px;
+}
 
 .u-text-bold::first-line {
     font-weight: bold;

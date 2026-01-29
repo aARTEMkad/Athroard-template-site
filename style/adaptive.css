@@ -1,4 +1,13 @@
-@media (max-width: 767px) {
+@media (max-width: 540px) {
+    .header__logo > p {
+        font-size: 3.5rem;
+        margin: 41px;
+    }
+
+}
+
+
+@media (max-width: 769px) {
 
     body {
         margin: 0;
@@ -14,8 +23,6 @@
     /* Menu */
     .header__menu-button {
         display: block;
-        justify-self: center;
-        align-items: center;
         margin: 26px 3% 36px auto;
     }
 
@@ -29,6 +36,7 @@
         top: 122px;
         left: 10vw;
         right: 10vw;
+        color: white;
         font-size: 30px;
     }
 
@@ -94,7 +102,7 @@
         padding: 0px 10px 0px 10px;
     }
     .advantages {
-        display: block;
+        padding: 0px 10px 0px 10px;
         margin-top: 10px;
     }
 
@@ -139,7 +147,9 @@
         padding: 0px 25px 0px 25px;
     }
 
-
+    .section-title {
+        padding: 0px 20px 0px 20px;
+    }
 
     .product-intro {
         display: block;
@@ -155,6 +165,10 @@
 
     #skladniki {
         display: block;
+    }
+
+    .composition__list {
+        padding: 0px 10px 0px 10px;
     }
 
     .composition__group--center {
@@ -268,15 +282,18 @@
     .products__controls {
         display: block;
         height: auto;
+        max-width: 350px;
+        width: 90%;
     }
 
     .products__label-text {
         margin: 20px 0 20px 0;
-        font-size: 23px;
+        font-size: 2.3rem;
     }
 
     .products__select {
-        width: 350px;
+        width: 100%;
+        max-width: 350px;
         font-size: 30px
     }
 
@@ -340,7 +357,7 @@
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
     .header__nav {
         margin-right: 50px;
     }
@@ -364,3 +381,4 @@
         margin-right: auto;
     }
 }
+

@@ -108,8 +108,10 @@
 
 
 .dog--parallax {
-    animation-name: anim;
-    animation-duration: 4s;
+    /* animation-name: anim;
+    animation-duration: 4s; */
+    transform: translateY(100%);
+    transition: transform 0.5s linear;
 }
 
 .dog {
@@ -146,19 +148,19 @@
 
 .advantages__image>img:first-child {
     position: absolute;
-    width: 100px;
+    width: 80px;
     height: auto;
     top: 70px;
-    left: 330px;
+    left: 360px;
     transform: rotate(5deg);
 }
 
 
 .advantages__image>img:last-child {
     position: absolute;
-    width: 100px;
+    width: 80px;
     top: 190px;
-    right: 340px;
+    right: 360px;
     transform: rotate(-15deg);
 }
 
